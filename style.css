@@ -135,7 +135,7 @@ profile-photo .img{
   transition: 0.5s;
 }
 .FirstElement .profile-photo img:hover{
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 .profile-text{
   max-width: 750px;
