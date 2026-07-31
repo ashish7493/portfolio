@@ -239,9 +239,10 @@ profile-photo .img{
 
 .education-content .row{
   display: flex;
+  align-items: flex-start;
   border-radius: 5px;
-  height: 400px;
-  margin-bottom: 250px;
+  min-height: auto;
+  margin-bottom: 60px;
 }
 
 .education-content .title{
@@ -270,6 +271,7 @@ profile-photo .img{
   border: 1px solid #e5e5e5;
   border-radius: 10px;
   width: 100%;
+  height: 100%;
   position: relative;
 }
 .education-content .row .timeline-item{
@@ -317,6 +319,8 @@ profile-photo .img{
   line-height: 25px;
   font-size: 16px;
   text-align: justify;
+  display: block;
+  margin-bottom: 8px;
 }
 
 
