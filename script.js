@@ -64,24 +64,7 @@ $(document).ready(function() {
         origin: "bottom"
       });
   
-    //contact form to excel sheet
-    const scriptURL = 'https://docs.google.com/forms/d/e/1FAIpQLSdCf7igwf1Ww0MjdQhQ_z1B9EEh1mpQElkfAW0B-Gu29FepGA/viewform?usp=sf_link';
 
-    const form = document.forms['submitToGoogleSheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-            .then(response => {
-                msg.innerHTML = "Message sent successfully"
-                setTimeout(function () {
-                    msg.innerHTML = ""
-                }, 5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-    })
       
     });
     
