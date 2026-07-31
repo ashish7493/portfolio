@@ -242,6 +242,9 @@ profile-photo .img{
   align-items: flex-start;
   border-radius: 5px;
   min-height: auto;
+}
+
+.education-content .container > .row{
   margin-bottom: 120px;
 }
 
