@@ -239,7 +239,7 @@ profile-photo .img{
 
 .education-content .row{
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   border-radius: 5px;
   min-height: auto;
 }
@@ -258,6 +258,8 @@ profile-photo .img{
   flex:0 0 50%;
   max-width: 50%;
   margin-top: 30px;
+  display: flex;
+  flex-direction: column;
 } 
 .education-content  h3.title{
   font-size:24px;
@@ -267,6 +269,10 @@ profile-photo .img{
 .education-content .row.timeline-box{
   flex:0 0 100%;
   max-width: 100%;  
+}
+.education-content .education > .row,
+.education-content .experience > .row{
+  flex: 1;
 }
 .education-content .row .timeline{
   /* background-color:#e5e5e5; */
@@ -351,6 +357,11 @@ profile-photo .img{
   display: flex;
   justify-content:space-between;
   flex-wrap: wrap;
+  align-items: stretch;
+}
+.project-link{
+  flex-basis: 32%;
+  display: flex;
 }
 .project{
     /* padding: 30px 15px; */
@@ -361,8 +372,12 @@ profile-photo .img{
     position: relative;
     padding: 25px;
     text-align: center;
-    flex-basis: 32%;
     transition: .3s;
+    display: flex;
+    flex-direction: column;
+}
+.project p{
+    margin-top: auto;
 }
 .project i{
   background-color: #fed700;
@@ -533,7 +548,7 @@ profile-photo .img{
     max-width: 100%;
     margin-top: 30px;
   }
-  .project{
+  .project-link{
     flex-basis: 100%;
     margin-bottom: 30px;
   }
