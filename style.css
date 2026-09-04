@@ -260,7 +260,7 @@ profile-photo .img{
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-} 
+}
 .education-content  h3.title{
   font-size:24px;
   margin-bottom: 30px;
@@ -268,7 +268,7 @@ profile-photo .img{
 }
 .education-content .row.timeline-box{
   flex:0 0 100%;
-  max-width: 100%;  
+  max-width: 100%;
 }
 .education-content .education > .row,
 .education-content .experience > .row{
@@ -286,12 +286,12 @@ profile-photo .img{
 .education-content .row .timeline-item{
   position:relative;
   padding-left: 37px;
-  padding-bottom: 50px; 
+  padding-bottom: 50px;
 }
 .education-content .row  .experience .timeline-item{
   position:relative;
   padding-left: 37px;
-  padding-bottom: 30px; 
+  padding-bottom: 30px;
 }
 .education-content .row .timeline-item:last-child{
   padding-bottom: 0;
@@ -303,7 +303,7 @@ profile-photo .img{
   height: 100%;
   left: 7px;
   top: 0;
-  background-color: #fed700;  
+  background-color: #fed700;
 }
 .education-content .row .circle-dot{
   position: absolute;
@@ -362,6 +362,7 @@ profile-photo .img{
 .project-link{
   flex-basis: 32%;
   display: flex;
+  margin-bottom: 30px;
 }
 .project{
     /* padding: 30px 15px; */
@@ -400,6 +401,73 @@ profile-photo .img{
   border-color: #fed700;
 }
 
+
+/*---------------------------Live Dashboard---------------------------*/
+.dashboard-content{
+  padding: 40px 0 90px;
+}
+.dashboard-title{
+  margin-bottom: 40px;
+  text-align: center;
+}
+.dashboard-title h4{
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 40px;
+  color: #fed700;
+  margin-bottom: 20px;
+}
+.dashboard-title p{
+  color: #e5e5e5;
+}
+.dashboard-block{
+  margin-bottom: 60px;
+}
+.dashboard-block:last-of-type{
+  margin-bottom: 0;
+}
+.dashboard-block-title{
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.dashboard-block-desc{
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+.dashboard-embed-container{
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  aspect-ratio: 600 / 373.5;
+  border: 2px solid #e5e5e5;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: .3s;
+  background-color: #2b2b2b;
+}
+.dashboard-embed-container:hover{
+  border-color: #fed700;
+}
+.dashboard-embed-container iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.dashboard-note{
+  text-align: center;
+  color: #999;
+  font-size: 13px;
+  margin-top: 10px;
+}
 
 
 /*---------------------------Contact Me---------------------------*/
@@ -456,7 +524,7 @@ profile-photo .img{
     max-width: 950px;
     margin: 0 auto;
     padding: 15px 0 26px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: rgba(255, 255, 255, 0.4);
     display: flex;
     flex-direction: column;
@@ -468,7 +536,7 @@ profile-photo .img{
     color: rgba(255, 255, 255, 0.4);
     margin-bottom: 10px;
   }
-  
+
   .copyright {
     font-size: 12px;
   }
@@ -486,7 +554,7 @@ profile-photo .img{
 }
 
 @media(max-width:1050px){
-  .FirstElement{ 
+  .FirstElement{
     flex-direction: column;
     padding-top: 2rem;
   }
@@ -501,8 +569,8 @@ profile-photo .img{
 @media only screen and (min-width:768px) and (max-width:999px){
   .container{
     width: 750px;
-  } 
-}  
+  }
+}
 
 
 /* Mobile Layout */
@@ -551,6 +619,13 @@ profile-photo .img{
   .project-link{
     flex-basis: 100%;
     margin-bottom: 30px;
+  }
+
+  .dashboard-embed-container{
+    aspect-ratio: 4 / 5;
+  }
+  .dashboard-block{
+    margin-bottom: 45px;
   }
 
 }
