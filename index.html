@@ -26,14 +26,15 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                
-               
+
+
             </div>
-        </div> 
+        </div>
     </header>
- 
+
     <!-------------------------- Home Page -------------------------->
     <div class="FirstElement" id="home">
         <div class="profile-photo">
@@ -66,7 +67,7 @@ Open to remote roles pan-India.</p>
     <section class="about-area" id="about">
         <div class="container">
             <div class="about">
-                
+
                 <div class="about-content">
                     <h4>About Me</h4>
                     <ul>
@@ -75,10 +76,10 @@ Open to remote roles pan-India.</p>
                       <li>I actively seek out opportunities to expand my knowledge and skills, embracing new tools and approaches. Feel free to explore my work and get in touch if you have any questions or opportunities to collaborate.</li>
                     </ul>
                 </div>
-                                  
+
                 <div class="about-skills">
                     <ul>
-                        <li>Name: Ashish Kumar Singh</li>     
+                        <li>Name: Ashish Kumar Singh</li>
                         <li>From: India</li>
                         <li>Email: ashishkumarsingh9135@gmail.com</li>
                         <li>Experience &lt;1yr</li>
@@ -120,7 +121,7 @@ Open to remote roles pan-India.</p>
                                     <h4 class="timeline-title">
                                         <i class="fa fa-calendar"></i> 2021-2025
                                     </h4>
-                                </div> 
+                                </div>
                                 <!-- Timeline-item -->
                                 <div class="timeline-item">
                                     <div class="circle-dot"></div>
@@ -179,8 +180,8 @@ Open to remote roles pan-India.</p>
                                     </h4>
                                     <li class="timeline-text">Trained 100+ students on Prompt Engineering as part of the IEEE team.</li><br>
                                     <li class="timeline-text">Organized multiple events on technologies like Salesforce, AI, Cyber Security working as Member </li>
-                                
-                                
+
+
                             </div>
                         </div>
                     </div>
@@ -207,7 +208,7 @@ Open to remote roles pan-India.</p>
                     </div>
                 </a>
                  <!-- 2nd Project -->
-                 <a href="https://app.powerbi.com/view?r=eyJrIjoiYTU4MGI1YzAtNmM1My00MzVjLWE1MTUtM2ZkNTFlMmFhMGMwIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9" target="_blank" rel="noopener noreferrer" class="project-link">
+                 <a href="#atliq-dashboard" class="project-link">
                     <div class="project">
                         <i class="fa-solid fa-chart-line"></i>
                         <h4>AtliQ Business Insights 360</h4>
@@ -222,8 +223,58 @@ Open to remote roles pan-India.</p>
                         <p>Cleaned and transformed 119,000+ streaming records across 56 platforms and 16 countries using Power Query, building an interactive Excel dashboard with PivotTables, PivotCharts, and slicers.</p>
                     </div>
                 </a>
-                
+                <!-- 4th Project -->
+                <a href="#ipo-dashboard" class="project-link">
+                    <div class="project">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                        <h4>IPO Subscription vs Listing Gain</h4>
+                        <p>Analyzed 163 India mainboard IPOs (2025-2026 YTD) to test whether subscription levels predict listing-day gains — found a 0.66 correlation, with IPOs subscribed 100x+ averaging +37% gains and zero losses across 28 issues. Scroll down for the live dashboard.</p>
+                    </div>
+                </a>
+
             </div>
+        </div>
+    </section>
+
+        <!-------------------------- Live Dashboards -------------------------->
+    <section class="dashboard-content" id="dashboard">
+        <div class="container">
+            <div class="dashboard-title">
+                <h4>Live Dashboards</h4>
+                <p>Explore my Power BI projects directly &mdash; no download or new tab required</p>
+            </div>
+
+            <!-- AtliQ Dashboard -->
+            <div class="dashboard-block" id="atliq-dashboard">
+                <h3 class="dashboard-block-title">AtliQ Business Insights 360</h3>
+                <p class="dashboard-block-desc">Multi-department Power BI dashboard for a simulated hardware manufacturer &mdash; 50+ DAX measures across Finance, Sales, Marketing, Executive and Supply Chain views.</p>
+                <div class="dashboard-embed-container">
+                    <iframe
+                        title="AtliQ Business Insights 360"
+                        src="https://app.powerbi.com/view?r=eyJrIjoiYTU4MGI1YzAtNmM1My00MzVjLWE1MTUtM2ZkNTFlMmFhMGMwIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9"
+                        frameborder="0"
+                        allowFullScreen="true"
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- IPO Dashboard -->
+            <div class="dashboard-block" id="ipo-dashboard">
+                <h3 class="dashboard-block-title">IPO Subscription vs Listing Gain</h3>
+                <p class="dashboard-block-desc">India Mainboard IPOs, 2025&ndash;2026 YTD (n=163) &mdash; testing whether subscription levels predict listing-day gains.</p>
+                <div class="dashboard-embed-container">
+                    <iframe
+                        title="IPO Subscription vs Listing Gain Analysis"
+                        src="https://app.powerbi.com/view?r=eyJrIjoiOGU5ZDJmOTEtNDQ5ZC00OWE3LWE5ZWItYzVlNGEyODdlZDcyIiwidCI6ImM2ZTU0OWIzLTVmNDUtNDAzMi1hYWU5LWQ0MjQ0ZGM1YjJjNCJ9"
+                        frameborder="0"
+                        allowFullScreen="true"
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <p class="dashboard-note">Best viewed on desktop for full interactivity.</p>
         </div>
     </section>
 
