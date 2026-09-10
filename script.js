@@ -12,7 +12,6 @@ $(document).ready(function() {
       $(".header-area").removeClass("sticky");
     }
 
-    // Update active navigation section
     updateActiveSection();
 
   });
@@ -28,7 +27,8 @@ $(document).ready(function() {
 
     var target = $(this).attr("href");
 
-    if ($(target).hasClass("active-section")) {
+    // Make sure target exists
+    if (!target || $(target).length === 0) {
       return;
     }
 
@@ -43,7 +43,13 @@ $(document).ready(function() {
 
     } else {
 
-      var offset = $(target).offset().top - 40;
+      var targetOffset = $(target).offset();
+
+      if (!targetOffset) {
+        return;
+      }
+
+      var offset = targetOffset.top - 40;
 
       $("html, body").animate(
         {
@@ -65,52 +71,47 @@ $(document).ready(function() {
   // Scroll Reveal
   // --------------------------------------------------
 
-  ScrollReveal({
+  if (typeof ScrollReveal !== "undefined") {
 
-    distance: "100px",
-
-    duration: 2000,
-
-    delay: 200
-
-  });
+    ScrollReveal({
+      distance: "100px",
+      duration: 2000,
+      delay: 200
+    });
 
 
-  ScrollReveal().reveal(
-    ".header a, .profile-photo, .about-content, .education",
-    {
-      origin: "left"
-    }
-  );
+    ScrollReveal().reveal(
+      ".header a, .profile-photo, .about-content, .education",
+      {
+        origin: "left"
+      }
+    );
 
 
-  ScrollReveal().reveal(
-    ".header ul, .profile-text, .about-skills, .experience",
-    {
-      origin: "right"
-    }
-  );
+    ScrollReveal().reveal(
+      ".header ul, .profile-text, .about-skills, .experience",
+      {
+        origin: "right"
+      }
+    );
 
 
-  ScrollReveal().reveal(
-    ".project-title, .contact-title, .dashboard-title",
-    {
-      origin: "top"
-    }
-  );
+    ScrollReveal().reveal(
+      ".project-title, .contact-title, .dashboard-title",
+      {
+        origin: "top"
+      }
+    );
 
 
-  // This automatically includes:
-  // AtliQ Dashboard
-  // IPO Dashboard
-  // Large-Cap Mutual Fund Dashboard
+    ScrollReveal().reveal(
+      ".projects, .contact, .dashboard-block",
+      {
+        origin: "bottom"
+      }
+    );
 
-  ScrollReveal().reveal(
-    ".projects, .contact, .dashboard-block",
-    {
-      origin: "bottom"
-    }
-  );
+  }
 
 });
 
@@ -123,16 +124,14 @@ function updateActiveSection() {
 
   var scrollPosition = $(window).scrollTop();
 
-
   // If at the very top of the page
-  if (scrollPosition === 0) {
+  if (scrollPosition <= 5) {
 
     $(".header ul li a").removeClass("active");
 
     $(".header ul li a[href='#home']").addClass("active");
 
     return;
-
   }
 
 
@@ -140,6 +139,10 @@ function updateActiveSection() {
   $("section").each(function() {
 
     var target = $(this).attr("id");
+
+    if (!target) {
+      return;
+    }
 
     var offset = $(this).offset().top;
 
